@@ -25,18 +25,18 @@ Message Board Product for Zope.
 Forum dla Zope.
 
 %prep
-%setup -q -c %{zope_subname}-%{version}
+%setup -q -n %{zope_subname}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{product_dir}
-cp -af * $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
+install -d $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
+
+cp -af {Extensions,www,*.py} $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 %py_comp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_ocomp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 # find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
-# rm -rf $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}/*.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,5 +53,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-# %%doc %{zope_subname}/*.txt
+%doc filelist.txt
 %{product_dir}/%{zope_subname}
