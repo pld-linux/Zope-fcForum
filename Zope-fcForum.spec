@@ -3,7 +3,7 @@ Summary:	Message Board Product for Zope
 Summary(pl):	Forum dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0.7
-Release:	1
+Release:	2
 License:	ZPL 2.0
 Group:		Development/Tools
 Source0:	http://www.genixsys.com/files/%{zope_subname}-2-0-7.tgz
