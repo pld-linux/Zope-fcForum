@@ -3,13 +3,13 @@
 Summary:	Message Board Product for Zope
 Summary(pl):	Forum dla Zope
 Name:		Zope-%{zope_subname}
-Version:	2.0.1
+Version:	2.0.5
 Release:	1
 License:	ZPL 2.0
 Group:		Development/Tools
-Source0:	http://www.genix.biz/files/%{zope_subname}-2-0-1.tgz
-# Source0-md5:	9c74b9b6f532aee732345485301c3c85
-URL:		http://www.genix.biz/forum_dev/index_html
+Source0:	http://www.genixsys.com/files/%{zope_subname}-2-0-5.tgz
+# Source0-md5:	c446824e3c12ad960444325929c6bb1a
+URL:		http://www.genixsys.com/forum_dev/index_html
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires:	Zope-CookieCrumbler
@@ -31,7 +31,7 @@ Forum dla Zope.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
-cp -af {Extensions,www,*.py} $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
+cp -af {www,*.py} $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 
 %py_comp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
 %py_ocomp $RPM_BUILD_ROOT%{product_dir}/%{zope_subname}
