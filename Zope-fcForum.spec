@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	http://www.genixsys.com/files/%{zope_subname}-2-0-7.tgz
 # Source0-md5:	159dedced08004e140c516041f6954bc
 URL:		http://www.genixsys.com/forum_dev/index_html
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires:	Zope-CookieCrumbler
