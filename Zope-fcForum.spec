@@ -6,8 +6,7 @@ Name:		Zope-%{zope_subname}
 Version:	2.0.1
 Release:	1
 License:	ZPL 2.0
-Group:		Development/Tools      
-######		Unknown group!
+Group:		Development/Tools
 Source0:	http://www.genix.biz/files/%{zope_subname}-2-0-1.tgz
 # Source0-md5:	9c74b9b6f532aee732345485301c3c85
 URL:		http://www.genix.biz/forum_dev/index_html
@@ -20,10 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	product_dir	/usr/lib/zope/Products
 
 %description
-Message Board Product for Zope
+Message Board Product for Zope.
 
 %description -l pl
-Forum dla Zope
+Forum dla Zope.
 
 %prep
 %setup -q -c %{zope_subname}-%{version}
