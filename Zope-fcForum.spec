@@ -13,6 +13,7 @@ URL:		http://www.genixsys.com/forum_dev/index_html
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires:	Zope-CookieCrumbler
+Requires(post,postun):  /usr/sbin/installzopeproduct
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
