@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	fcForum
 Summary:	Message Board Product for Zope
 Summary(pl):	Forum dla Zope
