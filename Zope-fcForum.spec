@@ -4,7 +4,7 @@ Summary:	Message Board Product for Zope
 Summary(pl):	Forum dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0.5
-Release:	1
+Release:	2
 License:	ZPL 2.0
 Group:		Development/Tools
 Source0:	http://www.genixsys.com/files/%{zope_subname}-2-0-5.tgz
@@ -30,7 +30,7 @@ Forum dla Zope.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {www,*.py} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {www,*.py,refresh.txt,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
