@@ -10,10 +10,11 @@ Source0:	http://www.genixsys.com/files/%{zope_subname}-2-0-7.tgz
 # Source0-md5:	159dedced08004e140c516041f6954bc
 URL:		http://www.genixsys.com/forum_dev/index_html
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
 %pyrequires_eq	python-modules
+Requires(post,postun):	/usr/sbin/installzopeproduct
 Requires:	Zope
 Requires:	Zope-CookieCrumbler
-Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,16 +43,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
-	/usr/sbin/installzopeproduct -d %{zope_subname} 
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	/usr/sbin/installzopeproduct -d %{zope_subname}
+	%service -q zope restart
 fi
 
 %files
