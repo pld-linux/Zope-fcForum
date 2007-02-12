@@ -1,6 +1,6 @@
 %define		zope_subname	fcForum
 Summary:	Message Board Product for Zope
-Summary(pl.UTF-8):   Forum dla Zope
+Summary(pl.UTF-8):	Forum dla Zope
 Name:		Zope-%{zope_subname}
 Version:	2.0.7
 Release:	3
